@@ -37,7 +37,7 @@ class sessionAssignable extends assignable {
                 this.sessionLogic.authenticate({}, null, response, true);
             };
         });
-        this.parentProxy.indexFile.executableService["/session/authenticated"] = (requestInfo, request, response) => {
+        this.parentProxy.indexFileSessionOnly.executableService["/session/authenticated"] = (requestInfo, request, response) => {
             let resultObj = { authenticated: false };
             if (this.isAuthenticated(request, response)) {
                 resultObj = this.getSessionObj(request, response);
