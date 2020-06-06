@@ -1,5 +1,5 @@
 const encryptor = require('./encryption/encryptor.js');
-
+const guid = require("./guid.js");
 /**
  * Authentication class that sets a user's session data.
  * 
@@ -25,6 +25,7 @@ class authentication {
         if (!sessionObj.authenticated) {
             sessionObj.authenticated = true;
         }
+        sessionObj._sessionId = guid();
         var encrypted = this.encryptor.encryptObject(sessionObj, this.config);
         var cookieString = `${this.config.cookie}=${encrypted};Path=/`;
         if (this.config.timeout) {
