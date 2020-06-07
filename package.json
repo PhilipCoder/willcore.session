@@ -1,6 +1,6 @@
 {
   "name": "willcore.session",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "WillCore.Session is a module that contains additional assignables that provides simple and lightweight session functionality in WillCore.Server.",
   "main": "moduleContainer/willCoreModules.js",
   "_moduleAliases": {
